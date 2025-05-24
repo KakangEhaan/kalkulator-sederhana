@@ -1,52 +1,19 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main() {
+    float a, b;
+    char op;
+    
+    while(1) { 
+        printf("Masukkan [operator angka]: ");
+        scanf("%f %c %f", &a, &op, &b);
+        
+        if(op == '+') printf("= %.2f\n", a + b);
+        else if(op == '-') printf("= %.2f\n", a - b);
+        else if(op == '*') printf("= %.2f\n", a * b);
+        else if(op == '/') printf("= %.2f\n", b != 0 ? a/b : 0);
+        else printf("Operator salah!\n");
+    }
+    
+    return 0;
+}
